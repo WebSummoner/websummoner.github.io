@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 512 512"
+  width="512"
+  height="512">
+
+  <defs>
+    <clipPath id="rounded-square">
+      <rect
+        x="0"
+        y="0"
+        width="512"
+        height="512"
+        rx="65.4"
+        ry="65.4"/>
+    </clipPath>
+  </defs>
+
+  <!-- Outer blue background -->
+  <rect
+    x="0"
+    y="0"
+    width="512"
+    height="512"
+    rx="65.4"
+    fill="#0A0CB7"/>
+
+  <!-- Main white circle -->
+  <circle
+    cx="256"
+    cy="256"
+    r="256"
+    fill="#F1F4FB"/>
+
+  <!-- Orange left-side shape -->
+  <path
+    d="M220.6 509.5
+       L239.8 414.7
+       L128 355
+       L107 239.6
+       L128 34.3
+       C51.5 78.5 0 161.2 0 256
+       C0 388.3 96 492.3 220.6 509.5Z"
+    fill="#ED581E"/>
+
+  <!-- Rotated shadows / structural bars -->
+  <g clip-path="url(#rounded-square)">
+
+    <rect
+      x="44.8"
+      y="-16.4"
+      width="58.1"
+      height="544.1"
+      transform="translate(29.4 -6.7) rotate(6.5)"
+      fill="#040483"
+      opacity="0.20"/>
+
+    <rect
+      x="408.1"
+      y="-12.7"
+      width="58.1"
+      height="539.6"
+      transform="translate(31.9 -47.9) rotate(6.5)"
+      fill="#030383"
+      opacity="0.40"/>
+
+  </g>
+
+  <!-- Main concentric geometry -->
+  <circle
+    cx="256"
+    cy="256"
+    r="182"
+    fill="#0A0CB7"/>
+
+  <circle
+    cx="256"
+    cy="256"
+    r="128"
+    fill="#FFFFFF"/>
+
+  <circle
+    cx="256"
+    cy="256"
+    r="103"
+    fill="#E36734"/>
+
+  <circle
+    cx="256"
+    cy="256"
+    r="99"
+    fill="#FFFFFF"/>
+
+  <!-- Orange corner detail -->
+  <circle
+    cx="469.6"
+    cy="42.4"
+    r="38.4"
+    fill="#EF591F"
+    clip-path="url(#rounded-square)"/>
+
+</svg>

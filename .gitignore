@@ -1,6 +1,7 @@
-node_modules/
 dist/
-site/data/webpack.json
+site/.hugo_build.lock
+site/resources/
+
 .idea
 *.iml
 .DS_Store

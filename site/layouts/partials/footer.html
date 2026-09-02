@@ -1,29 +1,28 @@
 <footer class="footer">
     <div class="container">
-        <div class="row">
-            <nav class="col-12 col-md footer__left">
-                <ul>
-                    {{ range .Site.Data.meta.verticals }}
+        <div class="row align-items-center mb-4">
+            <div class="col-12 col-md-6">
+                <ul class="footer__links" style="display:flex;gap:1.75rem;list-style:none;padding:0;flex-wrap:wrap;">
+                    {{ range hugo.Data.meta.nav }}
                     <li><a href="{{ .url }}">{{ .name }}</a></li>
                     {{ end }}
                 </ul>
-            </nav>
-            <nav class="col-12 col-md footer__right">
-                <ul>
-                    {{ range .Site.Data.meta.social }}
+            </div>
+            <div class="col-12 col-md-6 text-md-end">
+                <ul style="display:flex;gap:1.75rem;list-style:none;padding:0;justify-content:flex-end;flex-wrap:wrap;">
+                    {{ range hugo.Data.meta.social }}
                     <li><a href="{{ .url }}">{{ .name }}</a></li>
                     {{ end }}
                 </ul>
-            </nav>
+            </div>
         </div>
-        <div class="row">
-            <div class="col footer__separator"></div>
-        </div>
-        <div class="row footer__bottom align-items-center">
-            <div class="col-12 col-md-auto footer__copyright">© {{ now.Format "2006"}} Aerokube Software</div>
-            <div class="col-12 col-md footer__terms">
-                <!--<a class="mr-4" href="/terms">Terms of service</a>-->
-                <!--<a href="/policy">Privacy policy</a>-->
+        <div class="footer__separator"></div>
+        <div class="row align-items-center">
+            <div class="col-12 col-md-6 footer__copyright">
+                &copy; {{ now.Format "2006" }} <a href="https://riadvice.com">RIADVICE</a> · Apache-2.0
+            </div>
+            <div class="col-12 col-md-6 text-md-end footer__copyright">
+                Derived from Selenoid (Apache-2.0)
             </div>
         </div>
     </div>

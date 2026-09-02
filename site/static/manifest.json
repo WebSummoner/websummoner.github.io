@@ -1,6 +1,6 @@
 {
-  "short_name": "Aerokube Selenoid",
-  "name": "Aerokube Selenoid | Powerful implementation of Selenium hub using Docker containers to launch browsers",
+  "short_name": "WebSummoner",
+  "name": "WebSummoner — Powerful implementation of Selenium hub using Docker containers to launch browsers",
   "icons": [
     {
       "src": "/images/android-chrome-192x192.png",

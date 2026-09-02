@@ -1,7 +1,6 @@
-baseurl = "/"
-languageCode = "en-us"
-languageLang = "en"
-title = "Aerokube Selenoid | A Selenium Testing Solution Running Browsers and Mobile Applications in Docker"
+baseurl = "https://websummoner.riadvice.com/"
+locale = "en-us"
+title = "WebSummoner | A Selenium Testing Solution Running Browsers in Docker"
 
 enableRobotsTXT = true
 
@@ -9,7 +8,13 @@ enableRobotsTXT = true
 # RSS, categories and tags disabled for an easy start
 # See configuration options for more details:
 # https://gohugo.io/getting-started/configuration/#toml-configuration
-disableKinds = ["RSS", "taxonomy", "taxonomyTerm"]
+disableKinds = ["RSS", "taxonomy"]
 
 [params]
-description = "A cross browser and mobile application testing platform running everything in Docker containers. Fully compatible with Selenium Webdriver. Automated and live testing. Runs on your own hardware or in any popular cloud platform."
+description = "A cross browser testing platform running every session in its own Docker container. Fully compatible with Selenium WebDriver. Automated and live testing, with video and logs. Runs on your own hardware or in any popular cloud platform."
+
+# Allow raw HTML (divs for TOC/cross-link cards) inside markdown pages.
+[markup]
+[markup.goldmark]
+[markup.goldmark.renderer]
+unsafe = true

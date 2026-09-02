@@ -1,23 +1,37 @@
-<div class="container hero">
-    <div class="row justify-content-center align-items-center">
-        <div class="col-12 col-md-5">
-            <div class="row">
-                <div class="col-12">
-                    <h1 class="hero__heading-title">Selenium in Docker</h1>
-                    <p class="hero__heading-description">An open-source automated testing solution</p>
+<section class="hero">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-12 col-lg-6">
+                <h1 class="hero__heading-title"><span class="ws-web">Web</span>Summoner</h1>
+                <p class="hero__heading-description">
+                    A fast Selenium hub that launches browsers in Docker containers.
+                    Video with sound, live screen, logs — built for testing at scale.
+                </p>
+                <div class="hero__cta">
+                    <a class="hero__cta--primary" href="https://websummoner.github.io/websummoner/quick-start/">
+                        Get started →
+                    </a>
+                    <a class="hero__cta--secondary" href="/features/">Features</a>
+                    <a class="hero__cta--secondary" href="/browsers/">Browsers</a>
                 </div>
-                <div class="col-12 d-none d-md-block">
-                    {{ partial "browsers" . }}
+            </div>
+            <div class="col-12 col-lg-6">
+                <div class="hero-code">
+                    <div class="hero-code__dots">
+                        <span></span><span></span><span></span>
+                    </div>
+                    <pre><code>$ docker run -d --name websummoner \
+    -p 4444:4444 \
+    -v $PWD/browsers.json:/etc/websummoner/browsers.json:ro \
+    -v /var/run/docker.sock:/var/run/docker.sock \
+    websummoner/websummoner:latest</code></pre>
                 </div>
             </div>
         </div>
-        <div class="col-12 col-md-7">
-            <img class="hero__preview" src="images/preview.png" alt="preview">
+        <div class="row">
+            <div class="col-12">
+                {{ partial "browsers" . }}
+            </div>
         </div>
     </div>
-    <div class="row d-block d-md-none mt-4 text-center">
-        <div class="col-12">
-            {{ partial "browsers" . }}
-        </div>
-    </div>
-</div>
+</section>

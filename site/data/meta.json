@@ -1,126 +1,115 @@
 {
-  "features": [
-    {
-      "title": "Lightning fast",
-      "description": "Times faster than\nSelenium Grid",
-      "icon": "lightning"
-    },
-    {
-      "title": "Easy installation",
-      "description": "One binary does all\nthe job in minutes",
-      "icon": "installation"
-    },
-    {
-      "title": "Modern UI",
-      "description": "Shows running browser\nscreen and logs",
-      "icon": "ui"
-    },
-    {
-      "title": "Cluster ready",
-      "description": "Works like a charm\nin big clusters",
-      "icon": "cluster"
-    }
-  ],
-  "social": [
-    {
-      "name": "Docs",
-      "url": "https://aerokube.com/selenoid/latest"
-    },
-    {
-      "name": "Blog",
-      "url": "https://blog.aerokube.com"
-    },
-    {
-      "name": "Github",
-      "url": "https://github.com/aerokube/selenoid"
-    },
-    {
-      "name": "Telegram",
-      "url": "https://t.me/aerokube"
-    },
-    {
-      "name": "Twitter",
-      "url": "https://twitter.com/aerokube"
-    },
-    {
-      "name": "Youtube",
-      "url": "https://www.youtube.com/@aerokube"
-    },
-    {
-      "name": "Mail us",
-      "url": "mailto:support@aerokube.com"
-    }
-  ],
-  "verticals": [
-    {
-      "name": "Aerokube",
-      "url": "https://aerokube.com/"
-    },
-    {
-      "name": "Moon",
-      "url": "https://aerokube.com/moon/"
-    },
-    {
-      "name": "Moon Cloud",
-      "url": "https://aerokube.com/moon-cloud/"
-    }
-  ],
-  "projects": [
-    {
-      "title": "Selenoid",
-      "description": "A lightning fast Selenium protocol implementation running browsers in Docker containers",
-      "source": "https://github.com/aerokube/selenoid",
-      "documentation": "https://aerokube.com/selenoid/latest/"
-    },
-    {
-      "title": "Selenoid UI",
-      "description": "Cool graphical user interface for Selenoid mainly needed for debugging your Selenium tests",
-      "source": "https://github.com/aerokube/selenoid-ui",
-      "documentation": "https://aerokube.com/selenoid-ui/latest/"
-    },
-    {
-      "title": "CM",
-      "description": "A fully automated installation tool for Selenoid and Selenoid UI doing all the work for you",
-      "source": "https://github.com/aerokube/cm",
-      "documentation": "https://aerokube.com/cm/latest/"
-    },
-    {
-      "title": "Ggr",
-      "description": "A completely stateless and lightweight load balancer used to create big Selenium clusters",
-      "source": "https://github.com/aerokube/ggr",
-      "documentation": "https://aerokube.com/ggr/latest/"
-    },
-    {
-      "title": "Ggr UI",
-      "description": "An additional component used to show all sessions running in Selenium cluster in the same Selenoid UI",
-      "source": "https://github.com/aerokube/ggr-ui",
-      "documentation": "https://aerokube.com/ggr-ui/latest/"
-    }
-  ],
-  "articles": [
-    {
-      "title": "Selenium: done in 60 seconds",
-      "description": "In this article we demonstrate how to obtain a running Selenoid instance in 60 seconds",
-      "url": "https://medium.com/@aandryashin/selenium-done-in-60-seconds-176796f8bdc7"
-    },
-    {
-      "title": "Selenium on Windows: Docker Revolution",
-      "description": "This article solves the problem of the century - how to pack Windows-only browsers to Linux Docker containers",
-      "url": "https://medium.com/@aandryashin/selenium-on-windows-docker-revolution-f5a7eab205ad"
-    }
-  ],
-  "videos": [
-    {
-      "image": "images/videos/video1.png",
-      "url": "https://youtube.com"
-    },
-    {
-      "image": "images/videos/video2.png",
-      "url": "https://youtube.com"
-    },
-    {
-      "image": "images/videos/video3.png",
-      "url": "https://youtube.com"
-    }
-  ]
+ "features": [
+  {
+   "title": "Lightning fast",
+   "description": "Times faster than\nSelenium Grid",
+   "icon": "lightning"
+  },
+  {
+   "title": "Easy installation",
+   "description": "One binary does all\nthe job in minutes",
+   "icon": "installation"
+  },
+  {
+   "title": "Modern UI",
+   "description": "Shows running browser\nscreen and logs",
+   "icon": "ui"
+  },
+  {
+   "title": "Cluster ready",
+   "description": "Works like a charm\nin big clusters",
+   "icon": "cluster"
+  }
+ ],
+ "social": [
+  {
+   "name": "Docs",
+   "url": "https://websummoner.github.io/websummoner/"
+  },
+  {
+   "name": "GitHub",
+   "url": "https://github.com/WebSummoner/websummoner"
+  },
+  {
+   "name": "Docker",
+   "url": "https://hub.docker.com/u/websummoner"
+  },
+  {
+   "name": "Mail us",
+   "url": "mailto:websummoner@riadvice.com"
+  }
+ ],
+ "verticals": [
+  {
+   "name": "WebSummoner",
+   "url": "https://github.com/WebSummoner/websummoner"
+  }
+ ],
+ "projects": [
+  {
+   "title": "WebSummoner",
+   "description": "A lightning fast Selenium protocol implementation running browsers in Docker containers",
+   "source": "https://github.com/WebSummoner/websummoner",
+   "documentation": "https://websummoner.github.io/websummoner/"
+  },
+  {
+   "title": "WebSummoner UI",
+   "description": "Cool graphical user interface for WebSummoner mainly needed for debugging your Selenium tests",
+   "source": "https://github.com/WebSummoner/websummoner-ui",
+   "documentation": "https://websummoner.github.io/websummoner-ui/"
+  },
+  {
+   "title": "Ggr",
+   "description": "A lightweight active load balancer that turns a set of WebSummoner hubs into one scalable, highly-available cluster",
+   "source": "https://github.com/WebSummoner/ggr",
+   "documentation": "https://websummoner.github.io/ggr/"
+  },
+  {
+   "title": "Ggr UI",
+   "description": "Aggregates the status of every hub behind Ggr so one dashboard shows the whole cluster",
+   "source": "https://github.com/WebSummoner/ggr-ui",
+   "documentation": "https://websummoner.github.io/ggr-ui/"
+  },
+  {
+   "title": "CM",
+   "description": "A fully automated installation tool for WebSummoner and WebSummoner UI doing all the work for you",
+   "source": "https://github.com/WebSummoner/cm",
+   "documentation": "https://websummoner.github.io/cm/"
+  }
+ ],
+ "articles": [
+  {
+   "title": "Selenium: done in 60 seconds",
+   "description": "In this article we demonstrate how to obtain a running WebSummoner instance in 60 seconds",
+   "url": "https://medium.com/@aandryashin/selenium-done-in-60-seconds-176796f8bdc7"
+  },
+  {
+   "title": "Selenium on Windows: Docker Revolution",
+   "description": "This article solves the problem of the century - how to pack Windows-only browsers to Linux Docker containers",
+   "url": "https://medium.com/@aandryashin/selenium-on-windows-docker-revolution-f5a7eab205ad"
+  }
+ ],
+ "videos": [],
+ "nav": [
+  {
+   "name": "Features",
+   "url": "/features/"
+  },
+  {
+   "name": "Browsers",
+   "url": "/browsers/"
+  },
+  {
+   "name": "Ecosystem",
+   "url": "/ecosystem/"
+  },
+  {
+   "name": "Resources",
+   "url": "/resources/"
+  },
+  {
+   "name": "Docs",
+   "url": "https://websummoner.github.io/websummoner/"
+  }
+ ]
 }

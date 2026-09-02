@@ -1,35 +1,64 @@
 name: build
 
+# Push to master  -> build + deploy to GitHub Pages (websummoner.riadvice.com)
+# Pull request    -> build only, so a broken template or dead link fails early
+# workflow_dispatch -> manual deploy, e.g. after changing the Pages settings
+#
+# First-time setup (once, in repository Settings -> Pages): choose
+# "GitHub Actions" as the source and set the custom domain to
+# websummoner.riadvice.com. Publishing from a workflow ignores any CNAME file,
+# so the domain is held in the repository settings only.
+
 on:
-  pull_request:
   push:
-    branches:
-      - master
+    branches: [master]
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
 
 jobs:
-  website:
+  build:
+    name: Build site
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v7
 
-      - uses: actions/setup-node@v1
+      # Official image, pinned: klakegg/hugo stopped at Hugo 0.111 in 2023.
+      - name: Build with Hugo
+        run: |
+          docker run --rm -v "$PWD":/project ghcr.io/gohugoio/hugo:v0.165.0 \
+            --source /project/site --destination /project/dist --cleanDestinationDir
+
+      - name: Verify output
+        run: |
+          for f in index.html css/site.css features/index.html browsers/index.html; do
+            test -f "dist/$f" || { echo "::error::dist/$f missing"; exit 1; }
+          done
+
+      - name: Upload site artifact
+        if: github.event_name != 'pull_request'
+        uses: actions/upload-pages-artifact@v5
         with:
-          node-version: 12.x
+          path: dist
 
-      - name: Cache node modules
-        uses: actions/cache@v2
-        env:
-          cache-name: cache-node-modules
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-build-${{ env.cache-name }}-
-            ${{ runner.os }}-build-
-            ${{ runner.os }}-
-
-      - name: Install Dependencies
-        run: npm install
-
-      - name: Build
-        run: npm run build
+  deploy:
+    name: Deploy to GitHub Pages
+    if: github.event_name != 'pull_request'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v5

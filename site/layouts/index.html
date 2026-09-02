@@ -1,6 +1,64 @@
 {{ define "main" }}
 {{ partial "hero" . }}
-{{ partial "features" . }}
-{{ partial "projects" . }}
-{{ partial "articles" . }}
+
+<section class="section quicknav">
+    <div class="container">
+        <div class="quicknav__grid">
+            <a class="quicknav__card" href="/features/">
+                <h3>⚡ Features</h3>
+                <p>What WebSummoner does — video with sound, live screen, logs, cluster-ready.</p>
+            </a>
+            <a class="quicknav__card" href="/browsers/">
+                <h3>🌐 Browsers</h3>
+                <p>Chrome, Firefox, Edge, Opera, Brave, Yandex and Safari with current versions.</p>
+            </a>
+            <a class="quicknav__card" href="/ecosystem/">
+                <h3>📦 Ecosystem</h3>
+                <p>CM installer, WebSummoner UI, GGR load balancer — the tools around the hub.</p>
+            </a>
+            <a class="quicknav__card" href="https://websummoner.github.io/websummoner/">
+                <h3>📖 Documentation</h3>
+                <p>Full guides and reference at the docs site with search and dark mode.</p>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="section section--alt features">
+    <div class="container">
+        <h2 class="section__title">Why <span class="ws-web">Web</span>Summoner</h2>
+        <p class="section__subtitle">A single Go binary replaces your entire Selenium Grid infrastructure.</p>
+        <div class="row">
+            {{ range hugo.Data.meta.features }}
+            <div class="col-6 col-md-3 mb-4">
+                <div class="features__feature">
+                    <img src="/images/features/{{ .icon }}.svg" alt="{{ .title }}">
+                    <p class="features__feature-title">{{ .title }}</p>
+                    <p class="features__feature-description">{{ replace .description "\n" "<br/>" | safeHTML }}</p>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
+
+{{ partial "maintainer-banner" . }}
+
+<section class="section projects">
+    <div class="container">
+        <h2 class="section__title">Ecosystem</h2>
+        <p class="section__subtitle">Five open-source tools working together for browser automation at any scale.</p>
+        <div class="projects__grid">
+            {{ range hugo.Data.meta.projects }}
+            <div class="projects__project">
+                <h3 class="projects__project-title">{{ .title }}</h3>
+                <p class="projects__project-description">{{ .description }}</p>
+                <ul class="projects__project-links">
+                    <li><a href="{{ .source }}">↗ Source</a></li>
+                </ul>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
 {{ end }}
