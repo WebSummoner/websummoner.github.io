@@ -32,7 +32,8 @@ jobs:
       # Official image, pinned: klakegg/hugo stopped at Hugo 0.111 in 2023.
       - name: Build with Hugo
         run: |
-          docker run --rm -v "$PWD":/project ghcr.io/gohugoio/hugo:v0.165.0 \
+          docker run --rm -u "$(id -u):$(id -g)" -e HOME=/tmp -v "$PWD":/project \
+            ghcr.io/gohugoio/hugo:v0.165.0 \
             --source /project/site --destination /project/dist --cleanDestinationDir
 
       - name: Verify output

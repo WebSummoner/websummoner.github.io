@@ -12,7 +12,7 @@ matching drivers, VNC and audio support baked in.
 | Browser | Image | Current version | WebDriver |
 | --- | --- | --- | --- |
 | Google Chrome | `websummoner/chrome` | 152.0.7977.64 | ChromeDriver 152.0.7977.64 |
-| Mozilla Firefox | `websummoner/firefox` | 154.0.1 | geckodriver 0.37.1 |
+| Mozilla Firefox | `websummoner/firefox` | 155.0.0 | geckodriver 0.37.1 |
 | Microsoft Edge | `websummoner/edge` | 152.0.4191.53 | msedgedriver 152.0.4191.53 |
 | Brave | `websummoner/brave` | 1.94.117 | ChromeDriver (Chromium core) |
 | Yandex Browser | `websummoner/yandex` | 26.6.1.1083 | YandexDriver |
@@ -38,7 +38,7 @@ tightly as you like:
 
 ```bash
 docker pull websummoner/chrome:152.0.7977.64
-docker pull websummoner/firefox:154.0.1
+docker pull websummoner/firefox:155.0.0
 docker pull websummoner/edge:152.0.4191.53
 docker pull websummoner/brave:1.94.117
 docker pull websummoner/yandex:26.6.1.1083
@@ -54,8 +54,8 @@ for two of them:
 {
   "chrome":  { "default": "152.0.7977.64",
                "versions": { "152.0.7977.64": { "image": "websummoner/chrome:152.0.7977.64",  "port": "4444" } } },
-  "firefox": { "default": "154.0.1",
-               "versions": { "154.0.1": { "image": "websummoner/firefox:154.0.1", "port": "4444" } } }
+  "firefox": { "default": "155.0.0",
+               "versions": { "155.0.0": { "image": "websummoner/firefox:155.0.0", "port": "4444" } } }
 }
 ```
 
