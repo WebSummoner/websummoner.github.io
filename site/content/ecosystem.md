@@ -20,8 +20,9 @@ All of them are developed and maintained by [RIADVICE](https://riadvice.com).
 
 ## WebSummoner {#websummoner}
 
-The hub itself: a ~10 MB Go binary that reads `browsers.json`, starts a
-container per Selenium session and proxies the WebDriver protocol to it.
+The hub itself: a ~10 MB Go binary that reads `browsers.json`, summons a
+browser into an ephemeral, session-scoped container for each Selenium session
+and proxies the WebDriver protocol to it.
 Video recording with sound, session logs, VNC, clipboard, file exchange and
 DevTools proxying are built in.
 

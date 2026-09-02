@@ -11,12 +11,12 @@ matching drivers, VNC and audio support baked in.
 
 | Browser | Image | Current version | WebDriver |
 | --- | --- | --- | --- |
-| Google Chrome | `websummoner/chrome` | 152.0.7977.64 | ChromeDriver 152.0.7977.64 |
+| Google Chrome | `websummoner/chrome` | 152.0.7977.75 | ChromeDriver 152.0.7977.75 |
 | Mozilla Firefox | `websummoner/firefox` | 155.0.0 | geckodriver 0.37.1 |
-| Microsoft Edge | `websummoner/edge` | 152.0.4191.53 | msedgedriver 152.0.4191.53 |
-| Brave | `websummoner/brave` | 1.94.117 | ChromeDriver (Chromium core) |
+| Microsoft Edge | `websummoner/edge` | 152.0.4191.62 | msedgedriver 152.0.4191.62 |
+| Brave | `websummoner/brave` | 1.94.119 | ChromeDriver (Chromium core) |
 | Yandex Browser | `websummoner/yandex` | 26.6.1.1083 | YandexDriver |
-| Opera | `websummoner/opera` | 135.0.5973.66 | ChromeDriver — see [Opera](#opera) |
+| Opera | `websummoner/opera` | 135.0.5973.76 | ChromeDriver — see [Opera](#opera) |
 | WebKit (Safari engine) | `websummoner/safari` | 2.52.6 | WebKitWebDriver — see [WebKit](#webkit-safari) |
 
 Every image embeds a VNC server; there are no separate `vnc_*` image variants.
@@ -32,17 +32,17 @@ tightly as you like:
 | --- | --- | --- |
 | line | `chrome:152` | floats — rebuilt with the newest patch of that line |
 | major.minor | `chrome:152.0` | compatibility alias |
-| full | `chrome:152.0.7977.64` | immutable, driver-matched pin |
+| full | `chrome:152.0.7977.75` | immutable, driver-matched pin |
 
 ## Ready-made images
 
 ```bash
-docker pull websummoner/chrome:152.0.7977.64
+docker pull websummoner/chrome:152.0.7977.75
 docker pull websummoner/firefox:155.0.0
-docker pull websummoner/edge:152.0.4191.53
-docker pull websummoner/brave:1.94.117
+docker pull websummoner/edge:152.0.4191.62
+docker pull websummoner/brave:1.94.119
 docker pull websummoner/yandex:26.6.1.1083
-docker pull websummoner/opera:135.0.5973.66
+docker pull websummoner/opera:135.0.5973.76
 docker pull websummoner/safari:2.52.6
 ```
 
@@ -52,8 +52,8 @@ for two of them:
 
 ```json
 {
-  "chrome":  { "default": "152.0.7977.64",
-               "versions": { "152.0.7977.64": { "image": "websummoner/chrome:152.0.7977.64",  "port": "4444" } } },
+  "chrome":  { "default": "152.0.7977.75",
+               "versions": { "152.0.7977.75": { "image": "websummoner/chrome:152.0.7977.75",  "port": "4444" } } },
   "firefox": { "default": "155.0.0",
                "versions": { "155.0.0": { "image": "websummoner/firefox:155.0.0", "port": "4444" } } }
 }

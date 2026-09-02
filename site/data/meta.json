@@ -48,7 +48,7 @@
  "projects": [
   {
    "title": "WebSummoner",
-   "description": "A lightning fast Selenium protocol implementation running browsers in Docker containers",
+   "description": "A fast Selenium hub that summons a fleet of browsers into ephemeral, session-scoped Docker containers",
    "source": "https://github.com/WebSummoner/websummoner",
    "documentation": "https://websummoner.riadvice.com/websummoner/"
   },

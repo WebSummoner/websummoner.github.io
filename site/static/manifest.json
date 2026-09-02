@@ -1,6 +1,6 @@
 {
   "short_name": "WebSummoner",
-  "name": "WebSummoner — Powerful implementation of Selenium hub using Docker containers to launch browsers",
+  "name": "WebSummoner — A fast Selenium hub that summons a fleet of browsers into ephemeral, session-scoped Docker containers",
   "icons": [
     {
       "src": "/img/android-chrome-192x192.png",

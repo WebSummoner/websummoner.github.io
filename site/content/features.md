@@ -5,8 +5,8 @@ description: What WebSummoner does — performance, one-command installs, a mode
 
 # Features
 
-WebSummoner is a Selenium hub that launches every browser session in its own
-Docker container. This page expands the four pillars of the project — jump to
+WebSummoner is a fast Selenium hub that summons a fleet of browsers into Docker
+containers as ephemeral, session-scoped environments. This page expands the four pillars of the project — jump to
 what interests you, every section links to the related guides.
 
 <div class="toc" markdown="1">
