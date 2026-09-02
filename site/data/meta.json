@@ -24,7 +24,7 @@
  "social": [
   {
    "name": "Docs",
-   "url": "https://websummoner.github.io/websummoner/"
+   "url": "https://websummoner.riadvice.com/websummoner/"
   },
   {
    "name": "GitHub",
@@ -50,31 +50,31 @@
    "title": "WebSummoner",
    "description": "A lightning fast Selenium protocol implementation running browsers in Docker containers",
    "source": "https://github.com/WebSummoner/websummoner",
-   "documentation": "https://websummoner.github.io/websummoner/"
+   "documentation": "https://websummoner.riadvice.com/websummoner/"
   },
   {
    "title": "WebSummoner UI",
    "description": "Cool graphical user interface for WebSummoner mainly needed for debugging your Selenium tests",
    "source": "https://github.com/WebSummoner/websummoner-ui",
-   "documentation": "https://websummoner.github.io/websummoner-ui/"
+   "documentation": "https://websummoner.riadvice.com/websummoner-ui/"
   },
   {
    "title": "Ggr",
    "description": "A lightweight active load balancer that turns a set of WebSummoner hubs into one scalable, highly-available cluster",
    "source": "https://github.com/WebSummoner/ggr",
-   "documentation": "https://websummoner.github.io/ggr/"
+   "documentation": "https://websummoner.riadvice.com/ggr/"
   },
   {
    "title": "Ggr UI",
    "description": "Aggregates the status of every hub behind Ggr so one dashboard shows the whole cluster",
    "source": "https://github.com/WebSummoner/ggr-ui",
-   "documentation": "https://websummoner.github.io/ggr-ui/"
+   "documentation": "https://websummoner.riadvice.com/ggr-ui/"
   },
   {
    "title": "CM",
    "description": "A fully automated installation tool for WebSummoner and WebSummoner UI doing all the work for you",
    "source": "https://github.com/WebSummoner/cm",
-   "documentation": "https://websummoner.github.io/cm/"
+   "documentation": "https://websummoner.riadvice.com/cm/"
   }
  ],
  "articles": [
@@ -109,7 +109,7 @@
   },
   {
    "name": "Docs",
-   "url": "https://websummoner.github.io/websummoner/"
+   "url": "https://websummoner.riadvice.com/websummoner/"
   }
  ]
 }

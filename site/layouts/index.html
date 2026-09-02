@@ -16,7 +16,7 @@
                 <h3>📦 Ecosystem</h3>
                 <p>CM installer, WebSummoner UI, GGR load balancer — the tools around the hub.</p>
             </a>
-            <a class="quicknav__card" href="https://websummoner.github.io/websummoner/">
+            <a class="quicknav__card" href="https://websummoner.riadvice.com/websummoner/">
                 <h3>📖 Documentation</h3>
                 <p>Full guides and reference at the docs site with search and dark mode.</p>
             </a>
@@ -32,7 +32,7 @@
             {{ range hugo.Data.meta.features }}
             <div class="col-6 col-md-3 mb-4">
                 <div class="features__feature">
-                    <img src="/images/features/{{ .icon }}.svg" alt="{{ .title }}">
+                    <img src="/img/features/{{ .icon }}.svg" alt="{{ .title }}">
                     <p class="features__feature-title">{{ .title }}</p>
                     <p class="features__feature-description">{{ replace .description "\n" "<br/>" | safeHTML }}</p>
                 </div>

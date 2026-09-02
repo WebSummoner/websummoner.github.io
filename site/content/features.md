@@ -27,12 +27,12 @@ as Docker can spawn a container.
 
 Every session gets an isolated, reproducible environment: an exact browser
 version pinned by your
-[browsers configuration](https://websummoner.github.io/websummoner/reference/browsers-config/),
+[browsers configuration](https://websummoner.riadvice.com/websummoner/reference/browsers-config/),
 disposable tmpfs, and per-container CPU/memory limits.
 
-**Related:** [Usage statistics](https://websummoner.github.io/websummoner/guides/usage-statistics/)
+**Related:** [Usage statistics](https://websummoner.riadvice.com/websummoner/guides/usage-statistics/)
 for watching the hub under load ·
-[Recommended Docker settings](https://websummoner.github.io/websummoner/reference/docker-settings/)
+[Recommended Docker settings](https://websummoner.riadvice.com/websummoner/reference/docker-settings/)
 for sizing `-limit`.
 
 ## Easy installation {#easy-installation}
@@ -40,7 +40,7 @@ for sizing `-limit`.
 Two paths, both measured in minutes:
 
 - **Docker only** — one `docker run` with a `browsers.json` mounted. See the
-  [quick start](https://websummoner.github.io/websummoner/quick-start/).
+  [quick start](https://websummoner.riadvice.com/websummoner/quick-start/).
 - **Configuration Manager** — `cm websummoner start --vnc` downloads the
   binary, pulls browser images, writes the config and starts everything.
 
@@ -59,8 +59,8 @@ requests and per-browser usage — for one instance or a whole cluster.
 Sessions can be named per test (`name` capability), recorded to
 **H.264 video with sound**, and their logs saved automatically.
 
-**Related:** [Video recording (with audio)](https://websummoner.github.io/websummoner/guides/video-recording/)
-· [Capabilities reference](https://websummoner.github.io/websummoner/reference/capabilities/).
+**Related:** [Video recording (with audio)](https://websummoner.riadvice.com/websummoner/guides/video-recording/)
+· [Capabilities reference](https://websummoner.riadvice.com/websummoner/reference/capabilities/).
 
 ## Cluster ready {#cluster-ready}
 
@@ -69,7 +69,7 @@ Selenium sessions across WebSummoner nodes with per-user quotas. Statistics
 are exposed over HTTP for Telegraf/Prometheus-style monitoring pipelines.
 
 **Related:** [Ecosystem: GGR](/ecosystem/#ggr) ·
-[Migrating from Selenoid](https://websummoner.github.io/websummoner/migrating-from-selenoid/).
+[Migrating from Selenoid](https://websummoner.riadvice.com/websummoner/migrating-from-selenoid/).
 
 <div class="page-nav">
   <a href="/">← Home</a>

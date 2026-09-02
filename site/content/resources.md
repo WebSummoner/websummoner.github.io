@@ -18,10 +18,10 @@ description: Articles, videos and links for getting more out of WebSummoner.
 ## Documentation
 
 Everything current lives at the docs site:
-[quick start](https://websummoner.github.io/websummoner/quick-start/),
-[guides](https://websummoner.github.io/websummoner/guides/video-recording/)
+[quick start](https://websummoner.riadvice.com/websummoner/quick-start/),
+[guides](https://websummoner.riadvice.com/websummoner/guides/video-recording/)
 and the full
-[capabilities reference](https://websummoner.github.io/websummoner/reference/capabilities/).
+[capabilities reference](https://websummoner.riadvice.com/websummoner/reference/capabilities/).
 
 ## Upstream
 

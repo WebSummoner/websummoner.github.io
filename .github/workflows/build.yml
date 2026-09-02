@@ -31,8 +31,12 @@ jobs:
 
       # Official image, pinned: klakegg/hugo stopped at Hugo 0.111 in 2023.
       - name: Build with Hugo
+        env:
+          # Analytics is opt-in: unset means no tracking code at all.
+          GA_MEASUREMENT_ID: ${{ secrets.GA_MEASUREMENT_ID || vars.GA_MEASUREMENT_ID }}
         run: |
           docker run --rm -u "$(id -u):$(id -g)" -e HOME=/tmp -v "$PWD":/project \
+            -e HUGO_SERVICES_GOOGLEANALYTICS_ID="$GA_MEASUREMENT_ID" \
             ghcr.io/gohugoio/hugo:v0.165.0 \
             --source /project/site --destination /project/dist --cleanDestinationDir
 

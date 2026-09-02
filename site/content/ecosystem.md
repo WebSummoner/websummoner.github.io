@@ -26,7 +26,7 @@ Video recording with sound, session logs, VNC, clipboard, file exchange and
 DevTools proxying are built in.
 
 [Repository](https://github.com/WebSummoner/websummoner) ·
-[Quick start](https://websummoner.github.io/websummoner/quick-start/)
+[Quick start](https://websummoner.riadvice.com/websummoner/quick-start/)
 
 ## Configuration Manager (CM) {#configuration-manager-cm}
 
@@ -66,7 +66,7 @@ docker run -d --name ggr -p 4444:4444 \
 ```
 
 [Repository](https://github.com/WebSummoner/ggr) ·
-[Quick start](https://websummoner.github.io/ggr/quick-start/)
+[Quick start](https://websummoner.riadvice.com/ggr/quick-start/)
 
 ## Ggr UI {#ggr-ui}
 
@@ -78,5 +78,5 @@ the WebSummoner UI can show an entire cluster as though it were one hub.
 <div class="page-nav">
   <a href="/browsers/">← Supported browsers</a>
   <a href="/">Home</a>
-  <a href="https://websummoner.github.io/websummoner/">Documentation →</a>
+  <a href="https://websummoner.riadvice.com/websummoner/">Documentation →</a>
 </div>

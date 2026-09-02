@@ -8,10 +8,10 @@
   <meta name="theme-color" content="#000000">
   <link rel="manifest" href="manifest.json">
   <link rel="shortcut icon" href="favicon.ico">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
-  <link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+  <link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#5bbad5">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
   <meta property="og:image:height" content="1106">
@@ -25,7 +25,7 @@
   <meta property="description" content="{{ $description }}">
   <meta property="og:description" content="{{ $description }}">
   <meta property="og:url" content="{{ .Permalink }}">
-  <meta property="og:image" content="/images/og-image.jpg">
+  <meta property="og:image" content="/img/og-image.jpg">
   <meta name="twitter:site" content="@websummoner">
   {{ if or (eq .Kind "home") (eq .Kind "page")}}
   {{ if isset .Params "canonical" }}
@@ -44,6 +44,11 @@
 
   
 
+  {{ with site.Config.Services.GoogleAnalytics.ID }}
+  {{/* No Google code here: /consent.js injects gtag only once the visitor accepts. */}}
+  <script>window.WS_GA_ID='{{ . }}';</script>
+  <script defer src="/consent.js"></script>
+  {{ end }}
 </head>
 
 <body>
