@@ -16,7 +16,7 @@ matching drivers, VNC and audio support baked in.
 | Microsoft Edge | `websummoner/edge` | 152.0.4191.62 | msedgedriver 152.0.4191.62 |
 | Brave | `websummoner/brave` | 1.94.119 | ChromeDriver (Chromium core) |
 | Yandex Browser | `websummoner/yandex` | 26.6.1.1083 | YandexDriver |
-| Opera | `websummoner/opera` | 135.0.5973.76 | ChromeDriver — see [Opera](#opera) |
+| Opera | `websummoner/opera` | 135.0.5973.76 | OperaDriver 151.0.7922.176 |
 | WebKit (Safari engine) | `websummoner/safari` | 2.52.6 | WebKitWebDriver — see [WebKit](#webkit-safari) |
 
 Every image embeds a VNC server; there are no separate `vnc_*` image variants.
@@ -67,18 +67,14 @@ Two engines do not, for reasons outside WebSummoner's control.
 
 ### Opera
 
-Opera is supported on a best-effort basis. Opera's own driver,
-`operachromiumdriver`, lags the Chromium version Opera ships — Opera 135 is
-Chromium 151, while the newest published operadriver targets Chromium 150 — so
-the image drives Opera with the matching Chrome-for-Testing ChromeDriver
-instead. This is the approach the Selenium project itself recommends after it
-removed Opera support in Selenium 4.3.0.
+Opera's driver is numbered by the Chromium version Opera is built on, not by
+Opera's own — Opera 135 is Chromium 151 — so the image pairs it with
+OperaDriver 151. The full suite passes.
 
-What this costs you: opening a second window (`window.open`) can crash the
-renderer, so window-switching and `WebDriver.close()` are unreliable.
-Everything else in the suite passes.
-
-If your tests depend on multi-window behaviour, use a Chromium-based browser.
+Opera sometimes ships before the driver for its Chromium line exists. The build
+then falls back to the newest OperaDriver rather than a chromedriver: the
+version check only warns, and Opera patches its Chromium in ways only its own
+driver accounts for.
 
 ### WebKit (Safari)
 

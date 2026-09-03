@@ -71,6 +71,8 @@ a:hover { color: var(--ws-accent); }
   color: var(--ws-brand);
   border-bottom-color: var(--ws-accent);
 }
+.header__github { display: inline-flex; align-items: center; gap: 0.4rem; }
+.header__links .header__github:hover { border-bottom-color: transparent; }
 
 /* ===== HERO ===== */
 .hero {
@@ -498,4 +500,11 @@ a:hover { color: var(--ws-accent); }
     font-weight: 500;
     display: block;
     padding: 0.35rem 0;
+}
+
+/* Inline icons inherit the link colour; size them here, not in the SVG. */
+.header__github svg {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
 }

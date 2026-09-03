@@ -1,0 +1,11 @@
+{{- /*
+  Inline an SVG from assets/icons/<name>.svg so it inherits the text colour
+  (currentColor). Size it from CSS on the parent, not here.
+
+  Usage: {{ partial "icon" "github" }}
+*/ -}}
+{{- with resources.Get (printf "icons/%s.svg" .) -}}
+  {{- .Content | safeHTML -}}
+{{- else -}}
+  {{- errorf "icon %q: no assets/icons/%s.svg" . . -}}
+{{- end -}}
