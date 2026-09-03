@@ -90,8 +90,8 @@ known gaps:
 
 | Area | Behaviour |
 | --- | --- |
-| Proxy | the `proxy` capability is ignored, so traffic bypasses the proxy |
 | Frames and windows | switching frames can raise `StaleElementReferenceException` |
+| Closing a window | `close()` ends the whole session; use one window per session |
 
 WebKitGTK is also sensitive to host load: run it on an otherwise idle grid for
 stable results.
